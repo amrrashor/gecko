@@ -1,0 +1,76 @@
+/* I have added two elements (i) before and after the span with the class name called (.eng_ww_ttl_span1) and I removed the span with the class name (.eng_ww_ttl_span2)  */
+
+/* every (i) element have a pseudo element ::after  */
+
+/* STYLES FOR TITLE */
+.eng_ww_ttl_span2{
+    display:none;
+}
+
+.eng_ww_ttl_span1 {
+    text-align: center;
+}
+
+.eng_ww_title i {
+    flex:1;
+    background-color: #7bb9ce;
+    height: 18px;
+    display: block;
+}
+
+.eng_ww_title i:first-child {
+    text-align: end;
+}
+
+.eng_ww_title i:first-child::after {
+    margin-left: 8px;
+    content:'';
+    display: inline-block;
+    width: 45px;
+    height:38px;
+    border-right: #fff 10px solid;
+    border-left: #fff 10px solid;
+}
+
+.eng_ww_title i:last-child {
+    text-align: start;
+}
+
+.eng_ww_title i:last-child::after {
+    margin-right: 8px;
+    content:'';
+    display: inline-block;
+    width: 45px;
+    height:38px;
+    border-right: #fff 10px solid;
+    border-left: #fff 10px solid;
+}
+
+
+/* STYLES FOR CONTENT */
+.eng_widget_sw {
+    display: inline-block;
+    width: calc((100%/3) - 15px);
+    min-width:calc((100%/3) - 15px);
+    margin: 0 7.5px;
+}
+
+.eng_widget_href .eng_inner {
+    color: #000;
+}
+
+.eng_widget_href .eng_inner:hover {
+    color: #7bb9ce;
+    cursor: pointer;
+    transform: scale(1) !important;
+    opacity: 1 !important;
+}
+
+
+@media screen and (max-width:576px) {
+    .eng_widget_sw {
+        display: inline-block;
+        width: 100%;
+        margin: 0 7.5px;
+    }
+}
